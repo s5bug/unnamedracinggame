@@ -1,0 +1,31 @@
+[package]
+name = "unnamedracinggame"
+version = "0.1.0"
+authors = ["Aly <me@s5.pm>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+gfx-hal = "0.7.0"
+winit = "0.24.0"
+shaderc = "0.7.2"
+freetype-rs = "0.27.0"
+harfbuzz_rs = "1.2.0"
+
+specs = "0.16.1"
+
+fluent = "0.15.0"
+whoami = "1.1.1"
+unic-langid = "0.9.0"
+
+[target.'cfg(windows)'.dependencies]
+gfx-backend-dx12 = "0.7.0"
+gfx-backend-vulkan = "0.7.0"
+
+[target.'cfg(macos)'.dependencies]
+gfx-backend-metal = "0.7.0"
+
+[target.'cfg(unix)'.dependencies]
+gfx-backend-vulkan = "0.7.0"
+gfx-backend-gl = "0.7.1"
